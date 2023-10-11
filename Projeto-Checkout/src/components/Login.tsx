@@ -1,14 +1,17 @@
-import {Bitcoin, Block, BlockBottun, BlockCode, BlockDate, BlockHeader, BlockInput, BlockName, BlockNumber, BlockRodape, BlockTitleRodape, BlockvalueTitle, BlocokIcons, BookHeader, ButtonRodaoe, Container, Content, ContentHeader, ContentInput, ContentPayment, ContentTitle, CreditCart, HeaderTitle, IconBitcoin, IconCreditCart, IconPaypal, ImgRodape, InputCode, InputDate, InputName, InputNumber, Label, LabelName, LogoHeader, Number, Paypal, RodapeLabel, TitleBitcoin, TitleChechkout, TitleCreditCart, TitlePayment, TitlePaypal, TitleRodapeCinza, TitleRodapeorange, ValueTitle } from "./styles";
+import {Bitcoin, Block, BlockBottun, BlockCode, BlockDate, BlockHeader, BlockInput, BlockName, BlockNumber, BlockRodape, BlockTitleRodape, BlockvalueTitle, BlocokIcons, BookHeader, ButtonRodaoe, Container, Content, ContentHeader, ContentInput, ContentPayment, ContentTitle, CreditCart, HeaderTitle, IconBitcoin, IconCreditCart, IconPaypal, ImgRodape, InputBlock, InputCode, InputDate, InputName, InputNumber, Label, LabelName, LogoHeader, Number, Paypal, RodapeLabel, TitleBitcoin, TitleChechkout, TitleCreditCart, TitlePayment, TitlePaypal, TitleRodapeCinza, TitleRodapeorange, ValueTitle } from "./styles";
 import Logo from "../assets//32c90c58b9248b11396155be8de569cd.png"
 import LogoCredit from "../assets/cartao-de-credito.png"
 import LogoPaypal from "../assets/logotipo.png"
 import LogoBitcoin from "../assets/bitcoin.png"
 import LogoSeta from "../assets/icons8-turn-32 (1).png"
-import { ChangeEvent, FormEvent, useState } from "react";
-
+import { ChangeEvent, FormEvent, useState} from "react";
 
 
 export function Login(){
+
+const [newPaymentCart, setPaymentCart] = useState({
+  Pagamento: 'Cart',
+})
   
 const [newNumber,setNumber] = useState('')
 
@@ -17,6 +20,7 @@ const [newName, setName] = useState('')
 const [newCode, setCode] = useState('')
 
 const [newDate,setDate] = useState('')
+
 
 function HanldeDate(e: ChangeEvent<HTMLInputElement>){
   setDate(e.target.value)
@@ -35,7 +39,17 @@ function HandleNumber(e: ChangeEvent<HTMLInputElement>){
   setNumber(e.target.value)
 }
 
+
 function HandleSubmit(e: FormEvent){
+
+  try {
+    console.log(newPaymentCart)
+  } catch (error) {
+    console.log(error)
+  }finally {
+    setPaymentCart('')
+  }
+
   try {
     e.preventDefault()
     console.log(newNumber)
@@ -72,6 +86,8 @@ function HandleSubmit(e: FormEvent){
   setDate('')
   }
 }
+
+
   return(
     <Content>   
 
@@ -128,6 +144,7 @@ function HandleSubmit(e: FormEvent){
           </TitlePayment>
         </ContentPayment>
 
+        <ContentInput onSubmit={HandleSubmit}>
         <BlocokIcons>
           <CreditCart>
             <IconCreditCart 
@@ -160,8 +177,10 @@ function HandleSubmit(e: FormEvent){
           </Bitcoin>
         </BlocokIcons>
 
-        <ContentInput onSubmit={HandleSubmit}>
-          
+
+
+
+          <InputBlock>
           <Block>
             <BlockNumber>
               <Label 
@@ -211,7 +230,10 @@ function HandleSubmit(e: FormEvent){
                 onChange={HanldeDate}
               />
             </BlockDate>
-          </BlockInput>
+          </BlockInput>          
+          </InputBlock>
+
+
           <BlockBottun>
             <ButtonRodaoe 
               type="submit">

@@ -88,17 +88,29 @@ export const BlocokIcons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:20px;
+  gap:30px;
   margin-top: 3%;
+  width: 100%;
 `
-export const CreditCart = styled.div`
-  width: 20%;
+export const CreditCart = styled.button`
+  width: 26%;
   height: 170px;
-  background: #7bcfd4;
+  border: solid 2px #e8ebeb;
+  background: white;
+  &:hover {
+  border: 1px solid #40EBF5;
+  padding: 1.5px;
+  box-shadow: 5px 10px 18px #888888;
+  }
+  &:focus{
+    bottom: 0;
+    right: 0;
+    background-color: #40EBF5;
+ }
 `
 export const IconCreditCart = styled.img`
-  margin-left: 28%;
-  margin-top: 15%;
+  margin-left: 1%;
+  padding-bottom: 23%;
   width: 60px;
 `
 export const TitleCreditCart = styled.p`
@@ -108,16 +120,26 @@ export const TitleCreditCart = styled.p`
   font-size: 18px;
   color: #4C4C6D;
   letter-spacing: 0.5px;
-  margin-top: 15%;
 `
-export const Paypal = styled.div`
-  width: 20%;
+export const Paypal = styled.button`
+  width: 26%;
   height: 170px;
   border: solid 2px #e8ebeb;
+  background: white;
+  &:hover {
+  border: 1px solid #40EBF5;
+  padding: 1.5px;
+  box-shadow: 5px 10px 18px #888888;
+  }
+  &:focus{
+    bottom: 0;
+    right: 0;
+    background-color: #40EBF5;
+ }
 `
 export const IconPaypal = styled.img`
-  margin-left: 34%;
-  margin-top: 15%;
+  margin-left: 1%;
+  padding-bottom: 4%;
   width: 60px;
 `
 export const TitlePaypal = styled.p`
@@ -129,14 +151,23 @@ export const TitlePaypal = styled.p`
   letter-spacing: 0.5px;
   margin-top: 15%;
 `
-export const Bitcoin = styled.div`
-  width: 20%;
+export const Bitcoin = styled.button`
+  width: 26%;
   height: 170px;
   border: solid 2px #e8ebeb;
+  background: white;
+  &:hover {
+  border: 1px solid #40EBF5;
+  padding: 1.5px;
+  box-shadow: 5px 10px 18px #888888;
+  }
+  &:focus{
+    bottom: 0;
+    right: 0;
+    background-color: #40EBF5;
+ }
 `
 export const IconBitcoin = styled.img`
-  margin-left: 30%;
-  margin-top: 15%;
   width: 60px;
 `
 export const TitleBitcoin = styled.p`
@@ -146,7 +177,7 @@ export const TitleBitcoin = styled.p`
   font-size: 18px;
   color: #4C4C6D;
   letter-spacing: 0.5px;
-  margin-top: 15%;
+  margin-top: 22%;
 `
 export const ContentInput = styled.form`
   display: flex;
@@ -154,8 +185,16 @@ export const ContentInput = styled.form`
   margin-left: 17.2%;
   width: 65%;
   height: 38%;
-  border: solid 2px #e8ebeb;
   margin-top: 3%;
+`
+export const InputBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 4.8%;
+  width: 89.6%;
+  height: 100%;
+  border: solid 2px #e8ebeb;
+  margin-top: 4%;
 `
 export const Block = styled.div`
   margin-top: 5.5%;
@@ -234,8 +273,8 @@ export const RodapeLabel = styled.label`
 `
 export const BlockRodape = styled.div`
   display: flex;
-  margin-left: 22%;
-  margin-top: 4%;
+  margin-left: 26%;
+  margin-top: 29.3%;
   gap: 10px;
 `
 export const BlockTitleRodape = styled.div`
@@ -265,7 +304,8 @@ export const ButtonRodaoe = styled.button`
   background: #fa6b05;
   border:none;
   border-radius: 30px;
-  width: 25%;
-  height: 24px;
-  margin-left: 70%;
+  width: 22%;
+  height: 30px;
+  margin-left: 63%;
+  margin-top: 5%;
 `
